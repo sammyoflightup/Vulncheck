@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VulnCheck - Secure Smarter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <header class="w-full px-8 py-4 flex justify-between items-center bg-gray-800 shadow-lg">
+    <div class="flex items-center gap-2">
+      <img src="vulncheck.png" alt="VulnCheck Logo" class="h-10 w-10">
+      <span class="font-bold text-xl">VulnCheck</span>
+    </div>
+    <a href="login.html" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition">Login</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex-1 flex flex-col justify-center items-center text-center px-6 py-16 bg-gradient-to-br from-gray-900 to-gray-800">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Find. Fix. Fortify.</h1>
+    <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mb-8">
+      VulnCheck helps developers and security teams identify vulnerabilities quickly,
+      ensuring your smart contracts stay secure, resilient, and trustworthy.
+    </p>
+    <a href="login.html" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-lg font-semibold transition">
+      Get Started
+    </a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-100">Why Choose VulnCheck?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-400">AI-Powered Scans</h3>
+        <p class="text-gray-300">Leverages AI to detect vulnerabilities like reentrancy, overflow, and access control issues.</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-400">Quick Security Scores</h3>
+        <p class="text-gray-300">Get a clear, actionable security score for your smart contracts within seconds.</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2 text-blue-400">Trusted by Developers</h3>
+        <p class="text-gray-300">Used by DeFi developers, investors, and auditors to secure blockchain projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="bg-gray-800 py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12 text-gray-100">How It Works</h2>
+      <div class="space-y-8 md:space-y-0 md:flex md:justify-between md:gap-6">
+        <div class="bg-gray-700 rounded-2xl p-6 shadow hover:shadow-lg transition flex-1">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">1. Upload or Paste Code</h3>
+          <p class="text-gray-300">Provide your Solidity or Rust smart contract code for analysis.</p>
+        </div>
+        <div class="bg-gray-700 rounded-2xl p-6 shadow hover:shadow-lg transition flex-1">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">2. AI Scan</h3>
+          <p class="text-gray-300">Our AI scans for known vulnerabilities and logic flaws automatically.</p>
+        </div>
+        <div class="bg-gray-700 rounded-2xl p-6 shadow hover:shadow-lg transition flex-1">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">3. Get Results</h3>
+          <p class="text-gray-300">Receive a security score, detailed issues, and actionable suggestions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">Secure Your Smart Contracts Today</h2>
+    <a href="login.html" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-lg font-semibold transition">
+      Login & Start Scanning
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 VulnCheck. All rights reserved. Built with by Samuel George
+  </footer>
+
+</body>
+</html>
