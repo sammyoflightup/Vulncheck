@@ -35,6 +35,21 @@ Smart contracts are prone to bugs and security risks, which can lead to lost fun
 
 ---
 
+Roadmap
+
+# Expanded support for Solidity versions
+
+# Detect gas optimization issues
+
+# Web dashboard with contract scan history
+
+# CI/CD integration for automated contract checks
+
+# IDE plugin for real-time auditing
+
+# Run a smart contract scan
+python vulncheck.py --scan ./contracts/MyContract.sol
+
 ## Getting Started
 ```bash
 # Clone the repository
@@ -45,18 +60,3 @@ cd vulncheck
 
 # Install dependencies
 pip install -r requirements.txt
-
-Roadmap
-
- Expanded support for Solidity versions
-
- Detect gas optimization issues
-
- Web dashboard with contract scan history
-
- CI/CD integration for automated contract checks
-
- IDE plugin for real-time auditing
-
-# Run a smart contract scan
-python vulncheck.py --scan ./contracts/MyContract.sol
