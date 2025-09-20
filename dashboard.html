@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VulnCheck Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+<header class="bg-indigo-600 text-white shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <h1 class="text-2xl font-bold">🔒 VulnCheck</h1>
+    <nav class="space-x-6">
+      <a href="dashboard.html" class="hover:text-gray-200">Dashboard</a>
+      <a href="index.html" class="hover:text-gray-200 font-semibold">🏠 Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto p-8">
+  <h2 class="text-xl font-bold mb-6">Scan a Smart Contract</h2>
+
+  <textarea id="contractCode" rows="8" placeholder="Paste Solidity or Rust code here..." class="w-full p-4 border rounded-lg text-gray-800"></textarea>
+  <input type="file" id="fileInput" class="mt-2 mb-2">
+  <button id="scanBtn" class="mt-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-xl font-semibold transition">
+    Scan Contract
+  </button>
+
+  <pre id="scanResults" class="bg-gray-100 text-gray-800 p-4 rounded-lg max-h-96 overflow-auto mt-4"></pre>
+</main>
+
+<script>
+async function scanContract(code){
+    if(!code) return alert("Paste your contract code!");
+    const res = await fetch("/api/scan", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({contract_code: code})
+    });
+
+    const data = await res.json();
+    const resultsDiv = document.getElementById("scanResults");
+    resultsDiv.innerHTML = "";
+
+    if(data.error){
+        resultsDiv.innerHTML = `<p class="text-red-600">${data.error}</p>`;
+    } else {
+        resultsDiv.innerHTML = `
+            <p><strong>Security Score:</strong> ${data.security_score || "N/A"}</p>
+            <p><strong>Vulnerabilities:</strong></p>
+            <ul>${(data.vulnerabilities || []).map(v=>`<li>${v}</li>`).join('')}</ul>
+            <p><strong>Suggested Fixes:</strong></p>
+            <ul>${(data.suggested_fixes || []).map(f=>`<li>${f}</li>`).join('')}</ul>
+        `;
+    }
+}
+
+// Scan button
+document.getElementById("scanBtn").addEventListener("click", () => {
+    const code = document.getElementById("contractCode").value;
+    scanContract(code);
+});
+
+// File upload
+document.getElementById("fileInput").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const text = await file.text();
+    document.getElementById("contractCode").value = text;
+});
+</script>
+</body>
+</html>
