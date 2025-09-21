@@ -4,7 +4,7 @@
 VulnCheck is an **AI-powered tool that scans smart contracts for vulnerabilities**.  
 It provides a **security score** and **actionable suggestions** to help developers and investors secure their DeFi projects.  
 
-🔗 **Live Demo (coming soon):** [GitHub Pages]((https://sammyoflightup.github.io/Vulncheck/))  
+🔗 **Live Demo (coming soon):** [GitHub Pages](https://sammyoflightup.github.io/Vulncheck/)
 
 ---
 
