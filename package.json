@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR-USERNAME/vulncheck-demo.git"
+    "url": "git+https://github.com/sammyoflightup/vulncheck-demo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/YOUR-USERNAME/vulncheck-demo/issues"
+    "url": "https://github.com/sammyoflightup/vulncheck-demo/issues"
   },
-  "homepage": "https://github.com/YOUR-USERNAME/vulncheck-demo#readme"
+  "homepage": "https://github.com/sammyoflightup/vulncheck-demo#readme"
 }
